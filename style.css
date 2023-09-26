@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* --------------header------------- */
+
+::-webkit-scrollbar{
+    width:0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(229, 9, 20);
+}
+
+body{
+    background: black;
+}
+
+.header{
+height: 630px;
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("header-img.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+}
+
+.navbar-brand{
+    width:160px;
+}
+.but-2:hover{
+    background-color:rgba(0, 0, 0, 0.496);
+    color:white;
+}
+
+/* ---------Media Query-------- */
+
+@media screen and (max-width:500px){
+    .navbar-brand{
+       width:100px;
+    }
+}
+@media screen and (max-width:400px){
+    .but-1{
+        padding:3px 5px;
+        /* margin-right: 100px; */
+    }
+    .but-2{
+        padding:3px 3px;
+        /* margin-right: 50px; */
+    }
+}
+@media screen and (max-width:350px){
+    .but-1{
+        display:none;
+    }
+   
+}
+
+/* <!----------------- sec-1 --------------------> */
+
+.sec-1-bg{
+    font-size:50px;
+}
+.but-3{
+    border: 1px solid rgb(229, 9, 20);
+    background: rgb(229, 9, 20);
+    font-weight: bold;
+    padding: 14px 27px;
+    font-size: 20px;
+    /* margin-top: -33px; */
+    /* margin-left: -4px; */
+    padding-bottom: 15px;
+}
+.but-3:hover{
+    background-color:rgba(0, 0, 0, 0.496);
+    color:white;
+    font-weight: bold;
+    
+}
+input{
+    padding: 17px 113px;
+    background-color: rgba(0, 0, 0, 0.496);
+    border:1px solid white;
+    color:white;
+}
+
+.line{
+    background-color:rgba(255, 255, 255, 0.708);
+    padding:4px 6px;
+    margin-top:-1px;
+}
+
+/* ---------Media Query-------- */
+
+@media screen and (max-width:450px){
+    input{
+       padding:10px 50px; 
+    }
+    .but-3{
+        padding:10px 15px;
+    }
+
+}
+
+@media screen and (max-width:798px){
+ .sec-1-bg{
+    font-size:30px;
+}
+}
+
+/* <!----------------- sec-2 --------------------> */
+
+.sec-2-bg{
+    font-size: 50px;
+}
+.sec-2-sm{
+    font-size:22px;
+}
+.content{
+    margin-top: 100px;
+}
+
+.line-1{
+    background-color:rgba(255, 255, 255, 0.708);
+    padding:4px 6px;
+    margin-top:55px;
+}
+
+/* ---------Media Query-------- */
+
+@media screen and (max-width:992px){
+    .sec-2-bg{
+        font-size:35px;
+    }
+    .sec-2-sm{
+        font-size:16px;
+    }
+    .content{
+        margin-top:1px;
+    }
+}
+
+/* <!----------------- sec-6 -------------------->  */
+
+.sec-6 h1{
+    font-size:55px;
+}
+.accordion{
+    margin:60px auto;
+    width:100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style:none;
+    width:100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    background:#303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+ input[type="radio"]{
+    display: none;
+}
+ .accordion .content-2{
+    background: #303030;
+    text-align: left;
+    padding: 0px 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+ .accordion input[type="radio"]:checked + label + .content-2{
+    max-height: 600px;
+    padding: 30px 20px;
+}    
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+/* ---------Media Query-------- */
+
+@media screen and (max-width:750px){
+    .sec-6 h1{
+        font-size:40px;
+    } 
+}
+@media screen and (max-width:500px){
+    .sec-6 h1{
+        font-size:30px;
+    } 
+}
+@media screen and (max-width:450px){
+    .accordion li label{
+        font-size: 18px;
+    } 
+}
+@media screen and (max-width:370px){
+    .accordion li label{
+        font-size: 14px;
+    } 
+}
+
+/* --------------footer--------------- */
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 7px solid #333;
+    color:#777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.767);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.img-fluid{
+    transition: all 0.5s;
+}
+.img-fluid:hover{
+    transform: scale(1.1);
+}
+
+
+/*----------Scroller button----------- */
+
+#scroll-to-top{
+    background:rgb(229, 9, 20); 
+    border:1px solid rgb(229, 9, 20);
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 10px 19px;
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
